@@ -2,43 +2,104 @@
 <html lang="en">
 
 <head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Student Portal Dashboard</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
 
 <body>
-    <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <a href="index.html">
-                    <h2 class="logo">Student Portal</h2>
-                </a>
-            </div>
+    <!-- Student Details Form -->
+    <div id="studentForm" class="form-container">
+        <h1>Enter Your Details</h1>
 
-            <div class="menu">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICE</a></li>
-                    <li><a href="#">DESIGN</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </div>
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="text" id="usn" placeholder="USN" required>
+        <input type="text" id="college" placeholder="College Name" required>
 
-            <div class="search">
-                <input class="srch" type="search" placeholder="Type To Text">
-                <a href="#"><button class="btn">Search</button></a>
-            </div>
+        <h3>Assignment Submission</h3>
+        <label>Assignment 1:
+      <select id="ass1">
+        <option value="✅ Submitted">Submitted</option>
+        <option value="❌ Not Submitted">Not Submitted</option>
+      </select>
+    </label><br>
+        <label>Assignment 2:
+      <select id="ass2">
+        <option value="✅ Submitted">Submitted</option>
+        <option value="❌ Not Submitted">Not Submitted</option>
+      </select>
+    </label><br>
+        <label>Assignment 3:
+      <select id="ass3">
+        <option value="✅ Submitted">Submitted</option>
+        <option value="❌ Not Submitted">Not Submitted</option>
+      </select>
+    </label>
+
+        <h3>Courses</h3>
+        <div id="coursesInput">
+            <input type="text" placeholder="Course Name" class="courseInput">
+            <input type="text" placeholder="Course Name" class="courseInput">
         </div>
+        <button type="button" onclick="addCourseInput()">+ Add Another Course</button>
 
-        <body style="background: url('bg.jpg') center/cover no-repeat;">
-            <div class="main">
-                <div class="content">
-                    <h1>Welcome 🎉</h1>
-                    <p class="par">You are now logged in.</p>
-                    <button class="cn"><a href="index.html">Logout</a></button>
+        <br><br>
+        <button onclick="saveDetails()">Submit</button>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard" style="display:none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">🎓 Student Portal</h2>
+            <ul>
+                <li onclick="showSection('welcome')">Dashboard</li>
+                <li onclick="showSection('courses')">Courses</li>
+                <li onclick="showSection('progress')">Progress</li>
+                <li onclick="showSection('result')">Result</li>
+                <li onclick="showSection('notice')">Notice</li>
+                <li onclick="showSection('schedule')">Schedule</li>
+                <li onclick="logout()">Logout</li>
+            </ul>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <input type="search" placeholder="Search">
+                <div class="profile">
+                    <div>
+                        <h3 id="studentName">Student Name</h3>
+                        <p id="studentDetails">USN | College</p>
+                    </div>
                 </div>
-            </div>
-        </body>
+            </header>
+
+            <section class="welcome">
+                <h2 id="welcomeText">Welcome back!</h2>
+                <p>Always stay updated in your student portal.</p>
+            </section>
+
+            <!-- Progress Section -->
+            <section class="progress">
+                <h2>Student Progress</h2>
+                <ul id="assignmentList">
+                    <!-- Filled dynamically -->
+                </ul>
+            </section>
+
+            <!-- Enrolled Courses -->
+            <section class="courses">
+                <h2>Enrolled Courses</h2>
+                <div id="courseList">
+                    <!-- Courses will appear here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
 
 </html>

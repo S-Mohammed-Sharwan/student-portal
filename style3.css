@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+}
+
+
+/* Student Form */
+
+.form-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.form-container input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    border: none;
+    background: #6c63ff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Dashboard Layout */
+
+.dashboard {
+    display: flex;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 220px;
+    background: #6c63ff;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.welcome {
+    background: #ecebff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.courses {
+    margin: 20px 0;
+}
+
+.course-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress ul {
+    list-style: none;
+    padding: 0;
+}
+
+.progress li {
+    background: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
